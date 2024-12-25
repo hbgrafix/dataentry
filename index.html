@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Daily Closing</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Data Entry</h1>
+
+        <!-- Data Wrapper -->
+        <div class="data-wrapper">
+            <!-- Data Entry Form -->
+            <div id="dataEntryForm">
+                <!-- Amount In Section -->
+                <div class="section" id="amountIn">
+                    <div class="section-header">
+                        <input type="checkbox" class="dropdown-btn">
+                        <h2>Amount In</h2>
+                        <p><span id="totalIn" class="section-total">0.00</span></p>
+                    </div>
+
+                    <div class="section-body dropdown">
+                        <div class="dropdown-content">
+                            <div class="category" data-category="manualSale">
+                                <div class="category-header">
+                                    <h3>Manual Sale</h3>
+                                    <p><strong>Subtotal:</strong> <span class="subtotal">0.00</span></p>
+                                </div>
+                                <div class="entry-row">
+                                    <input type="text" placeholder="Description">
+                                    <input type="number" placeholder="Amount" step="0.01">
+                                    <button class="delete-row">-</button>
+                                </div>
+                                <button class="add-row-btn">+</button>
+                            </div>
+
+                            <div class="category" data-category="systemSale">
+                                <div class="category-header">
+                                    <h3>System Sale</h3>
+                                    <p><strong>Subtotal:</strong> <span class="subtotal">0.00</span></p>
+                                </div>
+                                <div class="entry-row">
+                                    <input type="text" placeholder="Description">
+                                    <input type="number" placeholder="Amount" step="0.01">
+                                    <button class="delete-row">-</button>
+                                </div>
+                                <button class="add-row-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amount Out Section -->
+
+                <div class="section" id="amountOut">
+                    <div class="section-header">
+                        <input type="checkbox" class="dropdown-btn">
+                        <h2>Amount Out</h2>
+                        <p><span id="totalOut" class="section-total">0.00</span></p>
+                    </div>
+
+                    <div class="section-body dropdown">
+                        <div class="dropdown-content">
+                            <div class="category" data-category="purchase">
+                                <div class="category-header">
+                                    <h3>Purchase</h3>
+                                    <p><strong>Subtotal:</strong> <span class="subtotal">0.00</span></p>
+                                </div>
+                                <div class="entry-row">
+                                    <input type="text" placeholder="Description">
+                                    <input type="number" placeholder="Amount" step="0.01">
+                                    <button class="delete-row">-</button>
+                                </div>
+                                <button class="add-row-btn">+</button>
+                            </div>
+
+                            <div class="category" data-category="others">
+                                <div class="category-header">
+                                    <h3>Others</h3>
+                                    <p><strong>Subtotal:</strong> <span class="subtotal">0.00</span></p>
+                                </div>
+                                <div class="entry-row">
+                                    <input type="text" placeholder="Description">
+                                    <input type="number" placeholder="Amount" step="0.01">
+                                    <button class="delete-row">-</button>
+                                </div>
+                                <button class="add-row-btn">+</button>
+                            </div>
+
+                            <div class="category" data-category="expense">
+                                <div class="category-header">
+                                    <h3>Expense</h3>
+                                    <p><strong>Subtotal:</strong> <span class="subtotal">0.00</span></p>
+                                </div>
+                                <div class="entry-row">
+                                    <input type="text" placeholder="Description">
+                                    <input type="number" placeholder="Amount" step="0.01">
+                                    <button class="delete-row">-</button>
+                                </div>
+                                <button class="add-row-btn">+</button>
+                            </div>
+
+                            <div class="category" data-category="pos">
+                                <div class="category-header">
+                                    <h3>POS</h3>
+                                    <p><strong>Subtotal:</strong> <span class="subtotal">0.00</span></p>
+                                </div>
+                                <div class="entry-row">
+                                    <input type="text" placeholder="Description">
+                                    <input type="number" placeholder="Amount" step="0.01">
+                                    <button class="delete-row">-</button>
+                                </div>
+                                <button class="add-row-btn">+</button>
+                            </div>
+
+                            <div class="category" data-category="easypaisa">
+                                <div class="category-header">
+                                    <h3>Easypaisa</h3>
+                                    <p><strong>Subtotal:</strong> <span class="subtotal">0.00</span></p>
+                                </div>
+                                <div class="entry-row">
+                                    <input type="text" placeholder="Description">
+                                    <input type="number" placeholder="Amount" step="0.01">
+                                    <button class="delete-row">-</button>
+                                </div>
+                                <button class="add-row-btn">+</button>
+                            </div>
+
+                            <div class="category" data-category="discount">
+                                <div class="category-header">
+                                    <h3>Manual Discount</h3>
+                                    <p><strong>Subtotal:</strong> <span class="subtotal">0.00</span></p>
+                                </div>
+                                <div class="entry-row">
+                                    <input type="text" placeholder="Description">
+                                    <input type="number" placeholder="Amount" step="0.01">
+                                    <button class="delete-row">-</button>
+                                </div>
+                                <button class="add-row-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Counter Cash Section -->
+                <div class="section" id="amountCounterCash">
+                    <div class="section-header">
+                        <input type="checkbox" class="dropdown-btn">
+                        <h2>Counter Cash</h2>
+                        <p><span id="counterCash" class="section-total">0.00</span></p>
+                    </div>
+
+                    <div class="section-body dropdown">
+                        <div class="dropdown-content">
+                            <div class="category" data-category="counter">
+                                <div class="category-header">
+                                    <h3>Counter Cash</h3>
+                                    <p><strong>Subtotal:</strong> <span class="subtotal">0.00</span></p>
+                                </div>
+                                <div class="entry-row">
+                                    <input type="text" placeholder="Description">
+                                    <input type="number" placeholder="Amount" step="0.01">
+                                    <button class="delete-row">-</button>
+                                </div>
+                                <button class="add-row-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Summary Section -->
+            <div class="section" id="summary">
+                <div class="section-header">
+                    <h2>Summary</h2>
+                    <input type="datetime-local" name="datetime" id="datetime">
+                </div>
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Amount In</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="summary-table-in">
+                        <tr>
+                            <td>Manual Sale</td>
+                            <td id="manualSaleSummary">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>System Sale</td>
+                            <td id="systemSaleSummary">0.00</td>
+                        </tr>
+                        <!-- Additional rows for other categories -->
+                        <!-- Total Row -->
+                        <tr class="total-row">
+                            <td>Total In</td>
+                            <td id="totalInSummary">0.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Amout Out</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="summary-table-out">
+                        <tr>
+                            <td>Purchase</td>
+                            <td id="purchaseSummary">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Others</td>
+                            <td id="othersSummary">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Expense</td>
+                            <td id="expenseSummary">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>POS</td>
+                            <td id="posSummary">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Easypaisa</td>
+                            <td id="easypaisaSummary">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Manual Discount</td>
+                            <td id="discountSummary">0.00</td>
+                        </tr>
+                        <!-- Additional rows for other categories -->
+                        <!-- Total Row -->
+                        <tr class="total-row">
+                            <td>Total Out</td>
+                            <td id="totalOutSummary">0.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="summary-table">
+                    <tbody>
+                        <tr class="total-row">
+                            <td>Grand Total</td>
+                            <td id="totalGrandSummary">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Counter Cash</td>
+                            <td id="counterCashSummary">0.00</td>
+                        </tr>
+                        <tr class="balance-row">
+                            <td>Balance</td>
+                            <td id="balanceSummary">0.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <button id="saveData">Save Data</button>
+            </div>
+        </div>
+
+        <!-- Database Preview -->
+        <div class="section">
+            <h2>Database Preview</h2>
+            <table id="databasePreview">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Opening Balance</th>
+                        <th>Amount In</th>
+                        <th>Amount Out</th>
+                        <th>Closing Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic rows for saved data -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
